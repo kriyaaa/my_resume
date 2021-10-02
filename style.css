@@ -1,5 +1,11 @@
 body{
     margin: 0px;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
 }
 
 /* Body Header */
@@ -11,39 +17,82 @@ body{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 1.2rem;
 }
 
 /* Horizontal Lists */
 
-.horizontal-lists{
-    list-style: none;
-    padding-left: 0px;
-    margin: 0px;  
-} 
-
-.horizontal-lists li{
-    display: inline-block;
-    margin: 0px 15px 15px 0px;
-    margin-top: 20px;
+.bars{
+    color: white;
+    margin: 0;
+    margin-right: 5%;
+    display: none;
 }
 
-.nav-menu li a{
-    color: white;
-    text-decoration: none;
-    transition: color 0.5s, border-bottom 4s;
-    font-family: sans-serif;
+.bars i {
+    font-size: 2rem;
+}
+
+.dropdown-list{
+    margin: 0;
+    display: none;
+    background-color: #828470;
+    box-shadow: 0px 4px 8px 1px #535547;
+}
+
+.dropdown-list ul{
+    margin: 0.2rem 0.2rem;
+    text-align: left;
+    padding: 0px 0.8rem;
+}
+
+.dropdown-menu:hover .dropdown-list{
+    display: block;
+    position: absolute;
+    right: 3%;
+}
+
+.dropdown-list li{
+    margin: 0.4rem 0px;
+}
+
+.no-list-style{
+    list-style: none;
+}
+
+.no-list-style li {
+    font-weight: 100;
     font-size: 25px;
 }
 
-.nav-menu li a:hover{
-    color: gray;
+.no-list-style li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.horizontal-list {
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+}
+
+
+.nav-menu li a {
+    transition: color 0.5s, border-bottom 4s;
+}
+
+.nav-menu li a:hover {
+    color: lightgrey;
     border-bottom: 1px solid black;
 }
 
-.text-centre{
-    text-align: center;
-}
 
+/* Name and Social Section */
 
 #my-name{
     font-size: 3.5rem;
@@ -76,10 +125,11 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 section:nth-child(2n){
-    background-color: lightgray;
+    background-color: #9e9b9b29;
 }
 
 section:nth-child(2n+1){
@@ -109,6 +159,7 @@ section:nth-child(2n+1){
     height: auto;
     width: 100%;
     position: relative;
+    margin-bottom: 30px;
 }
 
 #my-image{
@@ -124,7 +175,7 @@ section:nth-child(2n+1){
     box-shadow: 1px 1px 10px 4px lightgray;
 }
 
-#abt p{
+#about-para{
     color: #353232;
     padding: 10px;
     width: 70%;
@@ -210,8 +261,8 @@ section:nth-child(2n+1){
     width: 100%;
 }
 .timeline-logo img{
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
 }
 
 #timeline-divider {
@@ -425,7 +476,19 @@ button:focus {
     outline: none;
 }
 
+/* Common Text Align Classes */
 
+.text-right{
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
 
 /*common color classes */
 
@@ -496,6 +559,61 @@ button:focus {
     width: 65%;
 }
 
+@media only screen and (max-width: 572px) {
+    
+    .timeline-box {
+        width: 100%;
+        left: 10% !important;
+    }
+
+    .bars {
+        display: block;
+    }
+    
+    
+    .nav-menu {
+        display: none;
+    } 
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+    .timeline-box {
+        width: 90%;
+        left: 10% !important;
+    }
+
+    .timeline-box::after {
+        left: -9.3% !important;
+    }
+
+    #timeline-divider {
+        top: 10%;
+        left: 2%;
+    }
+
+    #contact-form {
+        margin-left: 0%;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+    }
+
+    #my-details-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #contact-form-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+}
 
 
 
