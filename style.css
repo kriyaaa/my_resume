@@ -361,6 +361,7 @@ section:nth-child(2n+1){
 .portfolio-image-container:hover .portfolio-details {
     background-color: #80808078;
     color: Black;
+    font-size: 20px;
 }
 
 /* Contact Section */
